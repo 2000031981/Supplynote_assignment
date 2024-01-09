@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login form</title>
+    <style>
+        body{
+            background-color: whitesmoke;
+            font-family:Arial,Helvetica,sans-serif;
+        }
+        .login-form{
+            width: 300px;
+            background-color: white;
+            padding: 18px;
+            margin: 100px auto;
+        }
+
+        h2{
+            text-align:center;
+            margin-bottom: 23px;
+        }
+        form{ 
+            margin-bottom: 23px;
+        }
+        label{
+            display:block;
+            margin-bottom:23px;
+        }
+        .input-field{
+            margin-bottom: 23px;
+        }
+        input[type=email], input[type=password]{
+            width: 100%;
+            padding:10px;
+            box-sizing:border-box;
+            outline:none;
+        }
+        button[type=submit]{
+            cursor: pointer;
+            width:100%;
+            padding:10px;
+            border:none;
+            outline:none;
+            color:white;
+            background-color:rgb(144, 178, 238);
+            font-weight: bold;
+            font-size:18px;
+        }
+        button[type=submit]:hover{
+            background-color:rgb(91, 133, 205);
+        }
+
+        p{
+            text-align: center;
+            margin-top:20px;
+        }
+        a{
+            color:blue;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="login-form">
+        <h2>Login</h2>
+        <form >
+            <div class="input-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
+            </div>
+            <div class="input-field">
+                <label for="password"> Password</label>
+                <input type="password" id="password" required>
+            </div>
+            <div class="login-button">
+                <button type="submit">Login</button>
+            </div>
+            <p>Not a member? <a href="signup.html">Signup</a></p>
+        </form>
+        <script>
+            function auth(){
+                var email=document.getElementById("email").value;
+                var password=document.getElementById("password").value;
+            if(email=="admin@gmail.com" && password==32456){
+                window.location.assign('shorten.html');
+                alert("Login sucessfully!");
+            }
+            else{
+                alert("Invalid email or password");
+                return;
+            }
+            
+            }
+        </script>
+    </div>
+</body>
